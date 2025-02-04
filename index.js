@@ -8,7 +8,8 @@ let app = express()
 
 
 //** create a database connection for web site  */
-let mongoUrl ="mongodb+srv://admin:1234@cluster0.bbcds.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+const mongoUrl = "mongodb+srv://admin:1234@cluster0.bbcds.mongodb.net/food-city?retryWrites=true&w=majority";
+
 mongoose.connect(mongoUrl);
 let connection = mongoose.connection
 connection.once("open",()=>{
